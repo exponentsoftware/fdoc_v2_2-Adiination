@@ -12,8 +12,8 @@ const students = [
   }
   
   function addHobby(students, name, hobby) {
-    const student = students.find(student => student.name === name);
-    if (student) {
+    const student = students.find(student => student.name === name);//finding the student from the arrray
+    if (student) { //checking whether student's truthness
       student.hobbies.push(hobby);
       console.log(`Added '${hobby}' to the hobbies array of ${name}.`);
     } else {
@@ -24,7 +24,7 @@ const students = [
   function updateStudent(students, name, updatedInfo) {
     const student = students.find(student => student.name === name);
     if (student) {
-      Object.assign(student, updatedInfo);
+      Object.assign(student, updatedInfo);// assigning the updated info to student 
       console.log(`Updated information for ${name}.`);
     } else {
       console.log(`Student with name ${name} not found.`);
